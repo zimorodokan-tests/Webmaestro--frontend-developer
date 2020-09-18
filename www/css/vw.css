@@ -1,0 +1,1477 @@
+/* vw-standard */
+	*,
+	*::before,
+	*::after	{
+		-webkit-background-clip: padding-box;
+		-moz-background-clip: padding-box;
+		background-clip: padding-box;
+		background-color: transparent;
+		background-image: none;
+		border: 0px solid transparent;
+		border-collapse: collapse;
+		border-image-width: 0;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		/*font-family: Verdana, Tahoma, Calibri, sans-serif;*/
+		margin: 0;
+		outline: 0px solid transparent;
+		overflow-wrap: break-word;
+		padding: 0;
+		quotes: "«" "»" '"' '"';
+		text-transform: none;
+		vertical-align: top;
+		word-wrap: break-word;
+	}
+	a	{
+		color: rgb(70, 70, 70);
+	}
+	a:hover	{
+		color: rgb(218, 36, 25);
+	}
+	body	{
+		background-color: rgb(155, 255, 255);
+		background-color: black;
+		color: rgb(70, 70, 70);
+		font-family: "ProximaNova";
+		margin: 0 auto;
+		min-height: 320px;
+		min-width: 320px;
+		overflow: auto;
+		position: relative;
+		-webkit-transition: all .3s ease-out .1s;
+		-moz-transition: all .3s ease-out .1s;
+		-o-transition: all .3s ease-out .1s;
+		transition: all .3s ease-out .1s;
+		z-index: 0;
+	}
+	@font-face {
+		font-family: 'fontello';
+		src: url('fonts/fontello.eot?69857444');
+		src: url('fonts/fontello.eot?69857444#iefix') format('embedded-opentype'),
+			url('fonts/fontello.woff2?69857444') format('woff2'),
+			url('fonts/fontello.woff?69857444') format('woff'),
+			url('fonts/fontello.ttf?69857444') format('truetype'),
+			url('fonts/fontello.svg?69857444#fontello') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: "Museo Cyrl";
+		src: url("fonts/Museo Cyrl 500.ttf") format("truetype");
+		font-style: normal; font-weight: 400;
+	}
+	@font-face {
+		font-family: "ProximaNova";
+		src: url("fonts/ProximaNova-Regular.eot?") format("eot"),
+		url("fonts/ProximaNova-Regular.woff") format("woff"),
+		url("fonts/ProximaNova-Regular.ttf") format("truetype");
+		font-style: normal; font-weight: 400;
+		font-display: swap;
+	}
+/* vw-standard */
+/* body > header */
+	body > header{
+	}
+	body > header > .gallery	{
+		display: none;
+		z-index: 0;
+	}
+	body > header > .gallery > .left	{
+		background-color: rgb(211, 194, 159);
+		border-radius: 50%;
+		color: rgb(255, 255, 255);
+		cursor: pointer;
+		height: 32px;
+		position: absolute;
+		text-align: center;
+		width: 32px;
+		z-index: 1;
+	}
+	body > header > .gallery > .left:hover	{
+		background-color: rgb(207, 152, 147);
+	}
+	body > header > .gallery > .left::before	{
+		content: '\e819';
+		font-family: "fontello";
+		line-height: 32px;
+	}
+	body > header > .gallery > .right	{
+		background-color: rgb(211, 194, 159);
+		border-radius: 50%;
+		color: rgb(255, 255, 255);
+		cursor: pointer;
+		height: 32px;
+		position: absolute;
+		text-align: center;
+		width: 32px;
+		z-index: 1;
+	}
+	body > header > .gallery > .right:hover	{
+		background-color: rgb(207, 152, 147);
+	}
+	body > header > .gallery > .right::before	{
+		content: '\e81f';
+		font-family: "fontello";
+		line-height: 32px;
+	}
+	body > header > .gallery > .bottom	{
+		display: flex;
+		justify-content: center;
+		position: absolute;
+		width: 100vw;
+	}
+	body > header > .gallery > .bottom > div	{
+		background-color: rgba(255, 255, 255, .5);
+		border-radius: 50%;
+	}
+	body > header > .gallery[data-item='1'] > .bottom > div:nth-child(1),
+	body > header > .gallery[data-item='2'] > .bottom > div:nth-child(2),
+	body > header > .gallery[data-item='3'] > .bottom > div:nth-child(3),
+	body > header > .gallery[data-item='4'] > .bottom > div:nth-child(4)	{
+		background-color: rgb(207, 152, 147);
+	}
+	body > header > .top	{
+		left: 0;
+		margin: 0 auto;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 10;
+	}
+	body > header > .top > .menu	{
+		display: none;
+	}
+	body > header > .top > .menu > .icon	{
+	}
+	body > header > .top > .menu > .items	{
+		background-color: rgb(135, 68, 99);
+		display: none;
+	}
+	body > header > .catalogue	{
+		margin: 0 auto;
+		position: relative;
+	}
+	body > header > .catalogue > .items	{
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+	body > header > .catalogue > .items > .item > .button	{
+		align-items: center;
+		cursor: pointer;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: relative;
+		text-align: center;
+	}
+	body > header > .catalogue > .items > .item:not(:last-child) > .button::after {
+		bottom: 0;
+		content: '';
+		display: block;
+		background-color: rgba(210, 210, 210, .4);
+		margin: auto;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 1px;
+	}
+	body > header > .catalogue > .items > .item > .button > .icon	{
+		display: block;
+		flex: none;
+	}
+	body > header > .catalogue > .items > .item > .button > .icon::before	{
+		color: rgb(137, 137, 137);
+		content: '';
+		font-family: "fontello";
+	}
+	body > header > .catalogue > .items > .item > .button > .icon.hallway::before	{
+		content: '\e903';
+	}
+	body > header > .catalogue > .items > .item > .button > .icon.bedroom::before	{
+		content: '\e900';
+	}
+	body > header > .catalogue > .items > .item > .button > .icon.kitchen::before	{
+		content: '\e904';
+	}
+	body > header > .catalogue > .items > .item > .button > .icon.living::before	{
+		content: '\e906';
+	}
+	body > header > .catalogue > .items > .item > .button > .icon.sofa::before	{
+		content: '\e909';
+	}
+	body > header > .catalogue > .items > .item > .button > .icon.commode::before	{
+		content: '\e902';
+	}
+	body > header > .catalogue > .items > .item > .button > .icon.office::before	{
+		content: '\e907';
+	}
+	body > header > .catalogue > .items > .item > .button > .icon.wardrobe::before	{
+		content: '\e90a';
+	}
+	body > header > .catalogue > .items > .item > .button > .icon.pouf::before	{
+		content: '\e908';
+	}
+	body > header > .catalogue > .items > .item > .button > .icon.chairs::before	{
+		content: '\e901';
+		content: '\e81b';
+	}
+	body > header > .catalogue > .items > .item > .button > .icon.lamp::before	{
+		content: '\e905';
+	}
+	body > header > .catalogue > .items > .item > .button > .text	{
+		color: rgb(51, 51, 51);
+		display: block;
+		font-family: "ProximaNova", sans-serif;
+	}
+	body > header > .catalogue > .items > .item:hover > .button	{
+		background-color: rgb(212, 78, 100);
+	}
+	body > header > .catalogue > .items > .item:hover > .button > .icon::before	{
+		color: rgb(255, 255, 255);
+	}
+	body > header > .catalogue > .items > .item:hover > .button > .text	{
+		color: rgb(255, 255, 255);
+	}
+	body > header > .catalogue > .items > .item > .content	{
+		display: none;
+	}
+	body > header > .catalogue > .items > .item > .content > .items > .item	{
+		position: relative;
+	}
+	body > header > .catalogue > .items > .item > .content > .items > .item.more.with-items:not(:hover)::before 	{
+		align-items: end;
+		background: linear-gradient(transparent, white);
+		bottom: 0;
+		content: '\f103';
+		cursor: pointer;
+		display: block;
+		display: flex;
+		font-family: "fontello";
+		justify-content: center;
+		position: absolute;
+		right: 0;
+		text-align: center;
+		z-index: 1;
+	}
+	body > header > .catalogue > .items > .item > .content > .items > .item > .name	{
+		padding: 0 8px 0 0;
+	}
+	body > header > .catalogue > .items > .item > .content > .items > .item > .name > a	{
+		font-size: 16px;
+		font-family: "ProximaNova-Regular";
+		color: rgb(207, 152, 147);
+		line-height: 1.2;
+	}
+	body > header > .catalogue > .items > .item > .content > .items > .item > .name > a:hover	{
+		color: rgb(211, 77, 100);
+		text-decoration: none;
+	}
+	body > header > .catalogue > .items > .item > .content > .items > .item > .image	{
+		background-color: rgb(236, 235, 226);
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-radius: 50%;
+		position: relative;
+	}
+	body > header > .catalogue > .items > .item > .content > .items > .item:hover > .image::after	{
+		border-color: rgb(211, 77, 100);
+		border-radius: 50%;
+		border-width: 3px;
+		content: '';
+		display: block;
+		left: -2px;
+		position: absolute;
+		top: -2px;
+	}
+	body > header > .catalogue > .items > .item > .content > .items > .item > .items	{
+		background-color: rgb(255, 255, 255);
+		overflow: hidden;
+	}
+	body > header > .catalogue > .items > .item > .content > .items > .item:hover > .items	{
+		overflow: visible;
+	}
+	body > header > .catalogue > .items > .item > .content > .items > .item > .items > .item	{
+		padding: 0 8px 0 0;
+	}
+	body > header > .catalogue > .items > .item > .content > .items > .item > .items > .item > a	{
+		color: rgb(137, 136, 137);
+		font-family: "ProximaNova-Regular";
+		font-size: 14px;
+		line-height: 1.2;
+	}
+	body > header > .catalogue > .items > .item > .content > .items > .item > .items > .item::before	{
+		color: rgb(137, 136, 137);
+		content: '\f105';
+		display: inline-block;
+		font-family: "fontello";
+		font-size: 14px;
+		padding: 0 8px 0 0;
+		line-height: 1.2;
+	}
+	@media (max-width: 767px)	{
+		body > header	{
+			padding: 52px 0 0;
+		}
+		body > header > .top	{
+			align-items: center;
+			background-color: rgb(255, 255, 255);
+			display: flex;
+			font-family: "Museo Cyrl";
+			height: 52px;
+			justify-content: space-between;
+			margin: 0 auto;
+			width: 100%;
+		}
+		body > header > .top > .menu	{
+			display: block;
+		}
+		body > header > .top > .menu > .icon	{
+			background-color: rgb(207, 152, 147);
+			color: rgb(255, 255, 255);
+			cursor: pointer;
+			height: 52px;
+			line-height: 52px;
+			text-align: center;
+			width: 52px;
+		}
+		body > header > .top > .menu > .icon::before	{
+			content: '\f0c9';
+			font-family: "fontello";
+			font-size: 40px;
+		}
+		body > header > .top > .menu.open > .items	{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100vw;
+			z-index: 1;
+		}
+		body > header > .top > .menu.open > .items > .close	{
+			color: rgb(255, 255, 255);
+			cursor: pointer;
+			position: absolute;
+			right: 0;
+			text-align: right;
+			top: 0;
+		}
+		body > header > .top > .menu.open > .items > .close::after	{
+			content: '\e814';
+			display: inline-block;
+			font-family: "fontello";
+			font-size: 20px;
+			height: 48px;
+			line-height: 48px;
+			text-align: center;
+			width: 48px;
+		}
+		body > header > .top > .menu.open > .items > .basket	{
+
+			margin: 32px auto;
+			text-align: center;
+		}
+		body > header > .top > .menu.open > .items > .basket > .circle	{
+			background-color: rgb(211, 194, 159);
+			border-color: rgb(211, 194, 159);
+			border-width: 1px;
+			border-radius: 50%;
+			cursor: pointer;
+			display: inline-block;
+			height: 52px;
+			position: relative;
+			width: 52px;
+		}
+		body > header > .top > .menu.open > .items > .basket > .circle:hover	{
+			background-color: rgb(135, 68, 99);
+		}
+		body > header > .top > .menu.open > .items > .basket > .circle::before	{
+			color: rgb(255, 255, 255);
+			content: '\f291';
+			display: block;
+			font-family: "fontello";
+			font-size: 20px;
+			height: 52px;
+			line-height: 52px;
+			text-align: center;
+			width: 52px;
+		}
+		body > header > .top > .menu.open > .items > .basket > .circle > .number	{
+			background-color: rgb(207, 152, 147);
+			border-radius: 50%;
+			color: rgb(255, 255, 255);
+			font-size: 16px;
+			height: 24px;
+			line-height: 24px;
+			position: absolute;
+			right: -12px;
+			text-align: center;
+			top: 26px;
+			width: 24px;
+		}
+		body > header > .top > .menu.open > .items > .login	{
+			color: rgb(207, 152, 147);
+			display: block;
+			font-size: 20px;
+			height: 48px;
+			line-height: 48px;
+			text-align: center;
+			text-decoration: underline;
+		}
+		body > header > .top > .menu.open > .items > .login > a	{
+			color: rgb(207, 152, 147);
+			text-decoration: underline;
+		}
+		body > header > .top > .menu.open > .items > .signin	{
+			color: rgb(207, 152, 147);
+			display: block;
+			font-size: 20px;
+			height: 48px;
+			line-height: 48px;
+			text-align: center;
+			text-decoration: underline;
+		}
+		body > header > .top > .menu.open > .items > .signin > a	{
+			color: rgb(207, 152, 147);
+			text-decoration: underline;
+		}
+		body > header > .top > .menu.open > .items > .link	{
+			color: rgb(255, 255, 255);
+			display: block;
+			font-size: 20px;
+			height: 48px;
+			line-height: 48px;
+			text-align: center;
+		}
+		body > header > .top > .menu.open > .items > .link > a	{
+			color: rgb(255, 255, 255);
+			text-decoration: none;
+		}
+		body > header > .top > .menu.open > .items > .link:hover	{
+			background-color: rgb(255, 255, 255);
+			color: rgb(137, 136, 137);
+		}
+		body > header > .top > .menu.open > .items > .link:hover > a	{
+			color: rgb(137, 136, 137);
+		}
+		body > header > .top > .menu.open > .items > .search	{
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			margin: 32px auto;
+			width: 50%;
+		}
+		body > header > .top > .menu.open > .items > .search > .input	{
+			border-color: rgb(255, 255, 255);
+			border-width: 0 0 1px 0;
+			color: rgb(255, 255, 255);
+			line-height: 28px;
+			padding: 0 16px;
+			width: 100%;
+		}
+		body > header > .top > .menu.open > .items > .search > .btn	{
+			background-color: rgb(211, 194, 159);
+			border-color: rgb(211, 194, 159);
+			border-radius: 50%;
+			border-width: 1px;
+			cursor: pointer;
+			height: 32px;
+			width: 32px;
+		}
+		body > header > .top > .menu.open > .items > .search:hover > .btn	{
+			background-color: rgb(135, 68, 99);
+		}
+		body > header > .top > .menu.open > .items > .search > .btn::before	{
+			color: rgb(255, 255, 255);
+			content: '\e800';
+			display: block;
+			font-family: "fontello";
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			width: 30px;
+		}
+		body > header > .top > .logo	{
+			background-image: url(../img/logo.png);
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-size: contain;
+			flex: none;
+			height: 40px;
+			min-width: 30%;
+		}
+		body > header > .top > .b	{
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+		}
+		body > header > .top > .b > .b1	{
+		}
+		body > header > .top > .b > .b1 > .tel	{
+			font-size: 12px;
+			line-height: 16px;
+			text-align: left;
+		}
+		body > header > .top > .b > .b1 > .tel > a	{
+			color: rgb(137, 136, 137);
+			text-decoration: none;
+		}
+		body > header > .top > .b > .b1 > .login	{
+			display: none;
+		}
+		body > header > .top > .b > .b1 > .signin	{
+			display: none;
+		}
+		body > header > .top > .b > .b2 > .link	{
+			display: none;
+		}
+		body > header > .top > .b > .b2 > .search	{
+			display: none;
+		}
+		body > header > .top > .b > .b2 > .lang	{
+			color: rgb(137, 136, 137);
+			cursor: pointer;
+			font-size: 14px;
+			line-height: 20px;
+			width: 52px;
+			text-align: center;
+		}
+		body > header > .top > .b > .b2 > .lang::after	{
+			content: '\f107';
+			display: inline-block;
+			font-family: "fontello";
+			padding: 0 0 0 8px;
+		}
+		body > header > .top > .basket	{
+			display: none;
+		}
+		body > header > .catalogue	{
+			background-color: rgb(236, 235, 226);
+			background-image: url(https://dodomy.com.ua/app/img/main-slider/slide-1.jpg);
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			margin: 0 auto;
+			min-width: 100vw;
+			padding: 5px 20px;
+			position: relative;
+		}
+		body > header > .catalogue > .items	{
+			align-items: stretch;
+			flex-wrap: wrap;
+			margin: 0 -5px;
+		}
+		body > header > .catalogue > .items > .item	{
+			background-color: rgba(255, 255, 255, .9);
+			flex: 1 0 auto;
+			min-height: 90px;
+			margin: 5px;
+			min-width: 90px;
+		}
+		body > header > .catalogue > .items > .item > .button	{
+			height: 90px;
+		}
+		body > header > .catalogue > .items > .item > .button::after {
+			display: none;
+		}
+		body > header > .catalogue > .items > .item > .button > .icon	{
+			font-size: 22px;
+			height: 50px;
+			line-height: 50px;
+		}
+		body > header > .catalogue > .items > .item > .button > .text	{
+			font-size: 14px;
+			line-height: 1.2;
+		}
+		body > header > .catalogue > .items > .item.current	{
+			background-color: rgb(248, 248, 248);
+			height: 55px;
+			left: 0;
+			margin: 0;
+			min-height: auto;
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 100vw;
+			z-index: 1;
+		}
+		body > header > .catalogue > .items > .item.current > .button::before	{
+			bottom: 0;
+			content: '\f100';
+			display: block;
+			font-family: "fontello";
+			left: 16px;
+			line-height: 53px;
+			margin: auto;
+			position: absolute;
+			top: 0;
+			z-index: 1;
+		}
+		body > header > .catalogue > .items > .item.current > .button::after	{
+			background-color: transparent;
+			bottom: 0;
+			content: 'Назад';
+			display: block;
+			font-size: 14px;
+			left: 28px;
+			line-height: 55px;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			right: auto;
+			top: 0;
+			width: auto;
+			z-index: 1;
+		}
+		body > header > .catalogue > .items > .item.current > .button	{
+			flex-direction: row;
+			height: 55px;
+			justify-content: flex-start;
+			padding: 0 0 0 116px;
+			position: relative;
+		}
+		body > header > .catalogue > .items > .item.current > .button::before	{
+		}
+		body > header > .catalogue > .items > .item.current > .button > .icon	{
+			font-size: 32px;
+			height: 55px;
+			line-height: 55px;
+			margin: 0 16px 0 0;
+		}
+		body > header > .catalogue > .items > .item.current > .button > .text	{
+			font-size: 14px;
+			line-height: 55px;
+		}
+		body > header > .catalogue > .items > .item.current > .content	{
+			background-color: rgb(255, 255, 255);
+			box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, .1);
+			display: block;
+			left: 0;
+			padding: 16px;
+			position: absolute;
+			right: 0;
+			top: 55px;
+			z-index: 1;
+		}
+		body > header > .catalogue > .items > .item.current:hover > .button::before	{
+			color: rgb(255, 255, 255);
+		}
+		body > header > .catalogue > .items > .item.current:hover > .button::after	{
+			color: rgb(255, 255, 255);
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item:not(:last-child)	{
+			border-color: rgb(210, 210, 210);
+			border-width: 0 0 1px 0;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item:hover > .image::after	{
+			height: 74px;
+			width: 74px;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item.without-items	{
+			display: grid;
+			grid-template-columns: 70px 30px auto;
+			grid-template-rows: 15px 70px 15px;
+			height: 100px;
+			position: relative;
+			width: 100%;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item.without-items > .image	{
+			background-color: rgb(236, 235, 226);
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 50%;
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 2;
+			grid-row-end: 3;
+			height: 70px;
+			position: relative;
+			width: 70px;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item.without-items > .name	{
+			align-items: center;
+			display: flex;
+			grid-column-start: 3;
+			grid-column-end: 4;
+			grid-row-start: 2;
+			grid-row-end: 3;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item.with-items	{
+			display: grid;
+			grid-template-columns: 70px 30px auto;
+			grid-template-rows: 15px auto auto;
+			height: 100px;
+			position: relative;
+			width: 100%;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item.with-items > .image	{
+			background-color: rgb(236, 235, 226);
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 50%;
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 2;
+			grid-row-end: 4;
+			height: 70px;
+			position: relative;
+			width: 70px;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item.with-items > .name	{
+			grid-column-start: 3;
+			grid-column-end: 4;
+			grid-row-start: 2;
+			grid-row-end: 3;
+			margin: 0 0 16px 0;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item.with-items > .items	{
+			grid-column-start: 3;
+			grid-column-end: 4;
+			grid-row-start: 3;
+			grid-row-end: 4;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item.with-items:hover > .items	{
+			display: block;
+			left: -16px;
+			padding: 0 0 16px 16px;
+			position: absolute;
+			right: 0;
+			top: 0px;
+			z-index: 2;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item.more.with-items:not(:hover)::before 	{
+			font-size: 16px;
+			height: 34px;
+			left: 0px;
+		}
+	}
+	@media (min-width: 768px) and (max-width: 1199px)	{
+		body	{
+		}
+		body > header > .gallery	{
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			display: block;
+			height: 340px;
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		body > header > .gallery > .left	{
+			left: 16px;
+			top: 190px;
+		}
+		body > header > .gallery > .right	{
+			right: 16px;
+			top: 190px;
+		}
+		body > header > .gallery > .bottom > div	{
+			height: 10px;
+			margin: 0 5px;
+			width: 10px;
+		}
+		body > header > .gallery > .bottom	{
+			bottom: 10px;
+		}
+		body > header	{
+			padding: 80px 0 0;
+		}
+		body > header > .top	{
+			align-items: center;
+			background: linear-gradient(white, transparent);
+			display: flex;
+			font-family: "Museo Cyrl";
+			height: 80px;
+			justify-content: space-between;
+			margin: 0 auto;
+			padding: 12px 16px 12px 0;
+			width: 100%;
+		}
+		body > header > .top > .menu	{
+			display: block;
+		}
+		body > header > .top > .menu > .icon	{
+			background-color: rgb(207, 152, 147);
+			color: rgb(255, 255, 255);
+			cursor: pointer;
+			height: 56px;
+			line-height: 56px;
+			text-align: center;
+			width: 64px;
+		}
+		body > header > .top > .menu > .icon::before	{
+			content: '\f0c9';
+			font-family: "fontello";
+			font-size: 40px;
+		}
+		body > header > .top > .menu.open > .items	{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			height: 250px;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 230px;
+			z-index: 1;
+		}
+		body > header > .top > .menu.open > .items > .close	{
+			color: rgb(255, 255, 255);
+			cursor: pointer;
+			position: absolute;
+			right: 0;
+			text-align: right;
+			top: 0;
+		}
+		body > header > .top > .menu.open > .items > .close::after	{
+			content: '\e814';
+			display: inline-block;
+			font-family: "fontello";
+			font-size: 20px;
+			height: 48px;
+			line-height: 48px;
+			text-align: center;
+			width: 48px;
+		}
+		body > header > .top > .menu.open > .items > .item	{
+			display: none;
+		}
+		body > header > .top > .menu.open > .items > .link	{
+			color: rgb(255, 255, 255);
+			display: block;
+			font-size: 20px;
+			height: 48px;
+			line-height: 48px;
+			text-align: center;
+		}
+		body > header > .top > .menu.open > .items > .link > a	{
+			color: rgb(255, 255, 255);
+			text-decoration: none;
+		}
+		body > header > .top > .menu.open > .items > .link:hover	{
+			background-color: rgb(255, 255, 255);
+			color: rgb(137, 136, 137);
+		}
+		body > header > .top > .menu.open > .items > .link:hover > a	{
+			color: rgb(137, 136, 137);
+		}
+		body > header > .top > .logo	{
+			background-image: url(../img/logo.png);
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-size: 150px auto;
+			flex: none;
+			height: 56px;
+			min-width: 190px;
+		}
+		body > header > .top > .b	{
+			align-items: center;
+			display: flex;
+			flex:1 1 auto;
+			height: 56px;
+			justify-content: space-around;
+			width: 55%;
+		}
+		body > header > .top > .b > .b1	{
+			align-items: center;
+			display: flex;
+			flex:1 1 auto;
+			flex-wrap: wrap;
+			line-height: 28px;
+			max-width: 400px;
+			width: 75%;
+		}
+		body > header > .top > .b > .b1 > .tel	{
+			color: rgb(137, 136, 137);
+			font-size: 16px;
+			width: 40%;
+		}
+		body > header > .top > .b > .b1 > .tel > a	{
+			color: rgb(137, 136, 137);
+			text-decoration: none;
+		}
+		body > header > .top > .b > .b1 > .login	{
+			order: 1;
+			width: 25%;
+		}
+		body > header > .top > .b > .b1 > .login > a	{
+			color: rgb(207, 152, 147);
+			font-family: "Museo Cyrl";
+		}
+		body > header > .top > .b > .b1 > .signin	{
+			order: 1;
+			width: 35%;
+		}
+		body > header > .top > .b > .b1 > .signin > a	{
+			color: rgb(207, 152, 147);
+			font-family: "Museo Cyrl";
+		}
+		body > header > .top > .b > .b1 > :nth-child(2)	{
+			order: 5;
+		}
+		body > header > .top > .b > .b1 > :nth-child(3)	{
+			order: 4;
+		}
+		body > header > .top > .b > .b2	{
+			align-items: center;
+			display: flex;
+			justify-content: space-around;
+			min-width: 120px;
+		}
+		body > header > .top > .b > .b2 > .link	{
+			display: none;
+		}
+		body > header > .top > .b > .b2 > .search	{
+			min-width: 60px;
+			text-align: center;
+			width: 50%;
+		}
+		body > header > .top > .b > .b2 > .search > .input	{
+			display: none;
+		}
+		body > header > .top > .b > .b2 > .search > .btn	{
+			background-color: rgb(211, 194, 159);
+			border-radius: 50%;
+			display: inline-block;
+			height: 36px;
+			width: 36px;
+		}
+		body > header > .top > .b > .b2 > .search:hover > .btn	{
+			background-color: rgb(135, 68, 99);
+		}
+		body > header > .top > .b > .b2 > .search > .btn::before	{
+			color: rgb(255, 255, 255);
+			content: '\e800';
+			display: block;
+			font-family: "fontello";
+			height: 36px;
+			line-height: 36px;
+			text-align: center;
+			width: 36px;
+		}
+		body > header > .top > .b > .b2 > .lang	{
+			color: rgb(137, 136, 137);
+			cursor: pointer;
+			line-height: 32px;
+			min-width: 60px;
+			text-align: center;
+			width: 50%;
+		}
+		body > header > .top > .b > .b2 > .lang::after	{
+			content: '\f107';
+			display: inline-block;
+			font-family: "fontello";
+			padding: 0 0 0 8px;
+		}
+		body > header > .top > .basket	{
+			flex: none;
+			min-width: 70px;
+			padding: 0 12px 0 0;
+			text-align: left;
+		}
+		body > header > .top > .basket > .circle	{
+			background-color: rgb(211, 194, 159);
+			border-radius: 50%;
+			height: 56px;
+			position: relative;
+			width: 56px;
+		}
+		body > header > .top > .basket > .circle:hover	{
+			background-color: rgb(135, 68, 99);
+		}
+		body > header > .top > .basket > .circle::before	{
+			color: rgb(255, 255, 255);
+			content: '\f291';
+			display: block;
+			font-family: "fontello";
+			font-size: 20px;
+			height: 56px;
+			line-height: 56px;
+			text-align: center;
+			width: 56px;
+		}
+		body > header > .top > .basket > .circle > .number	{
+			background-color: rgb(207, 152, 147);
+			border-radius: 50%;
+			color: rgb(255, 255, 255);
+			font-size: 16px;
+			height: 24px;
+			line-height: 24px;
+			position: absolute;
+			right: -12px;
+			text-align: center;
+			top: 28px;
+			width: 24px;
+		}
+		body > header > .catalogue	{
+			background-color: rgba(255, 255, 255, .9);
+			margin: 0 auto;
+			padding: 0 16px;
+			position: relative;
+		}
+		body > header > .catalogue > .items > .item	{
+			height: 60px;
+			width: 100%;
+		}
+		body > header > .catalogue > .items > .item > .button	{
+			height: 60px;
+		}
+		body > header > .catalogue > .items > .item > .button::after {
+			height: 40px;
+		}
+		body > header > .catalogue > .items > .item > .button > .icon	{
+			font-size: 22px;
+		}
+		body > header > .catalogue > .items > .item > .button > .text	{
+			font-size: 14px;
+			line-height: 1.2;
+			padding: 0 2px;
+		}
+		body > header > .catalogue > .items > .item:hover > .content	{
+			background-color: rgb(255, 255, 255);
+			box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, .1);
+			display: block;
+			left: 16px;
+			padding: 16px;
+			position: absolute;
+			right: 16px;
+			top: 60px;
+		}
+		body > header > .catalogue > .items > .item > .content > .items	{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			width: 100%;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item	{
+			display: grid;
+			grid-template-columns: 70px 30px auto;
+			grid-template-rows: 70px 10px 70px;
+			flex: none;
+			height: 150px;
+			margin: 0 0 16px;
+			position: relative;
+			width: 210px;
+			width: 30%;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item > .image	{
+			background-color: rgb(236, 235, 226);
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 50%;
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 1;
+			grid-row-end: 2;
+			height: 70px;
+			position: relative;
+			width: 70px;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item:hover > .image::after	{
+			height: 74px;
+			width: 74px;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item > .name	{
+			align-items: center;
+			display: flex;
+			grid-column-start: 3;
+			grid-column-end: 4;
+			grid-row-start: 1;
+			grid-row-end: 2;
+			text-align: left;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item > .items	{
+			grid-column-start: 1;
+			grid-column-end: 4;
+			grid-row-start: 3;
+			grid-row-end: 4;
+			text-align: left;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item:nth-child(1)::after,
+		body > header > .catalogue > .items > .item > .content > .items > .item:nth-child(2)::after,
+		body > header > .catalogue > .items > .item > .content > .items > .item:nth-child(4)::after,
+		body > header > .catalogue > .items > .item > .content > .items > .item:nth-child(5)::after	{
+			bottom: 0;
+			content: '';
+			display: block;
+			background-color: rgba(210, 210, 210, .4);
+			height: 150px;
+			margin: auto;
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 1px;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item.with-items:hover > .items	{
+			display: block;
+			left: -16px;
+			padding: 0 0 16px 16px;
+			position: absolute;
+			right: 1px;
+			top: 0px;
+			z-index: 1;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item.more.with-items:not(:hover)::before 	{
+			font-size: 16px;
+			height: 34px;
+			left: 0;
+		}
+	}
+	@media (min-width: 1200px)	{
+		body	{
+			/*background-image: url(https://dodomy.com.ua/app/img/main-slider/slide-1.jpg);*/
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		body > header	{
+			padding: 110px 0 0;
+		}
+		body > header > .gallery	{
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			display: block;
+			height: 875px;
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		body > header > .gallery > .left	{
+			left: 20px;
+			top: 470px;
+		}
+		body > header > .gallery > .right	{
+			right: 20px;
+			top: 470px;
+		}
+		body > header > .gallery > .bottom	{
+			bottom: 20px;
+		}
+		body > header > .gallery > .bottom > div	{
+			height: 16px;
+			margin: 0 8px;
+			width: 16px;
+		}
+		body > header > .gallery::after	{
+			background: linear-gradient(white, transparent, transparent);
+			bottom: 0;
+			content: '';
+			display: block;
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 0;
+		}
+		body > header > .top	{
+			align-items: center;
+			display: flex;
+			font-family: "Museo Cyrl";
+			height: 110px;
+			justify-content: space-between;
+			margin: 0 auto;
+			max-width: 1170px;
+			width: 100%;
+		}
+		body > header > .top > .menu	{
+			display: none;
+		}
+		body > header > .top > .logo	{
+			background-image: url(../img/logo.png);
+			background-position: 0 50%;
+			background-repeat: no-repeat;
+			background-size: 250px auto;
+			background-size: contain;
+			flex: none;
+			height: 110px;
+			width: 270px;
+		}
+		body > header > .top > .b	{
+			display: block;
+			width: 770px;
+		}
+		body > header > .top > .b > .b1	{
+			align-items: center;
+			border-color: rgba(137, 136, 137, .3);
+			border-width: 0 0 1px 0;
+			display: flex;
+			height: 56px;
+			line-height: 56px;
+			justify-content: space-between;
+		}
+		body > header > .top > .b > .b1 > .tel	{
+			color: rgb(137, 136, 137);
+			font-size: 16px;
+		}
+		body > header > .top > .b > .b1 > .tel > a	{
+			color: rgb(137, 136, 137);
+			text-decoration: none;
+		}
+		body > header > .top > .b > .b1 > .login	{
+		}
+		body > header > .top > .b > .b1 > .login > a	{
+			color: rgb(207, 152, 147);
+			font-family: "Museo Cyrl";
+		}
+		body > header > .top > .b > .b1 > .login::after	{
+			color: rgb(207, 152, 147);
+			content: '\e803';
+			display: inline-block;
+			font-family: "fontello";
+			font-size: 20px;
+			padding: 0 0 0 16px;
+		}
+		body > header > .top > .b > .b1 > .signin > a	{
+			color: rgb(207, 152, 147);
+			font-family: "Museo Cyrl";
+		}
+		body > header > .top > .b > .b1 > .signin::after	{
+			color: rgb(207, 152, 147);
+			content: '\f234';
+			display: inline-block;
+			font-family: "fontello";
+			font-size: 20px;
+			padding: 0 0 0 16px;
+		}
+		body > header > .top > .b > .b2	{
+			align-items: center;
+			display: flex;
+			height: 54px;
+			justify-content: space-between;
+		}
+		body > header > .top > .b > .b2 > .link	{
+			line-height: 28px;
+			text-align: center;
+			width: 20%;
+		}
+		body > header > .top > .b > .b2 > .link > a	{
+			display: inline-block;
+			text-decoration: none;
+		}
+		body > header > .top > .b > .b2 > .link:hover > a	{
+			border-color: rgb(207, 152, 147);
+			border-width: 0 0 1px 0;
+			color: rgb(207, 152, 147);
+		}
+		body > header > .top > .b > .b2 > .search	{
+			align-items: center;
+			display: flex;
+			flex-wrap: nowrap;
+			width: 30%;
+		}
+		body > header > .top > .b > .b2 > .search > .input	{
+			border-color: rgb(210, 210, 210);
+			border-width: 0 0 1px 0;
+			color: rgb(137, 136, 137);
+			line-height: 28px;
+			padding: 0 16px;
+			width: 100%;
+		}
+		body > header > .top > .b > .b2 > .search > .btn	{
+			background-color: rgb(211, 194, 159);
+			border-radius: 50%;
+			height: 32px;
+			width: 32px;
+		}
+		body > header > .top > .b > .b2 > .search:hover > .btn	{
+			background-color: rgb(135, 68, 99);
+		}
+		body > header > .top > .b > .b2 > .search > .btn::before	{
+			color: rgb(255, 255, 255);
+			content: '\e800';
+			display: block;
+			font-family: "fontello";
+			height: 32px;
+			line-height: 32px;
+			text-align: center;
+			width: 32px;
+		}
+		body > header > .top > .b > .b2 > .lang	{
+			color: rgb(137, 136, 137);
+			line-height: 32px;
+			text-align: right;
+			width: 10%;
+		}
+		body > header > .top > .b > .b2 > .lang::after	{
+			content: '\f107';
+			display: inline-block;
+			font-family: "fontello";
+			padding: 0 0 0 16px;
+		}
+		body > header > .top > .basket	{
+			flex: none;
+			padding: 0 12px 0 0;
+			text-align: right;
+		}
+		body > header > .top > .basket > .circle	{
+			background-color: rgb(211, 194, 159);
+			border-radius: 50%;
+			height: 52px;
+			position: relative;
+			width: 52px;
+		}
+		body > header > .top > .basket > .circle:hover	{
+			background-color: rgb(135, 68, 99);
+		}
+		body > header > .top > .basket > .circle::before	{
+			color: rgb(255, 255, 255);
+			content: '\f291';
+			display: block;
+			font-family: "fontello";
+			font-size: 20px;
+			height: 52px;
+			line-height: 52px;
+			text-align: center;
+			width: 52px;
+		}
+		body > header > .top > .basket > .circle > .number	{
+			background-color: rgb(207, 152, 147);
+			border-radius: 50%;
+			color: rgb(255, 255, 255);
+			font-size: 16px;
+			height: 24px;
+			line-height: 24px;
+			position: absolute;
+			right: -12px;
+			text-align: center;
+			top: 26px;
+			width: 24px;
+		}
+		body > header > .catalogue	{
+			background-color: rgba(255, 255, 255, .8);
+			border-radius: 9px;
+			margin: 0 auto;
+			max-width: 1170px;
+			padding: 0;
+			position: relative;
+		}
+		body > header > .catalogue > .items > .item	{
+			height: 100px;
+			width: 100%;
+		}
+		body > header > .catalogue > .items > .item > .button	{
+			height: 100px;
+		}
+		body > header > .catalogue > .items > .item > .button::after {
+			height: 80px;
+		}
+		body > header > .catalogue > .items > .item:first-child > .button	{
+			border-radius: 9px 0 0 9px;
+		}
+		body > header > .catalogue > .items > .item:last-child > .button	{
+			border-radius: 0 9px 9px 0;
+		}
+		body > header > .catalogue > .items > .item > .button > .icon	{
+			font-size: 28px;
+			padding: 0 0 8px 0;
+		}
+		body > header > .catalogue > .items > .item > .button > .text	{
+			font-size: 14px;
+			line-height: 1.2;
+		}
+		body > header > .catalogue > .items > .item:hover > .content	{
+			background-color: rgb(255, 255, 255);
+			border-width: 1px;
+			box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, .1);
+			display: block;
+			left: 0;
+			padding: 16px;
+			position: absolute;
+			right: 0;
+			top: 100px;
+			width: 1170px;
+		}
+		body > header > .catalogue > .items > .item > .content > .items	{
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item	{
+			display: grid;
+			grid-template-columns: 44px 110px auto;
+			grid-template-rows: 20px 110px 20px;
+			flex: none;
+			height: 150px;
+			margin: 0 0 16px;
+			position: relative;
+			width: 33.333333%;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item > .image	{
+			background-color: rgb(236, 235, 226);
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 50%;
+			grid-column-start: 2;
+			grid-column-end: 3;
+			grid-row-start: 2;
+			grid-row-end: 3;
+			height: 110px;
+			position: relative;
+			width: 110px;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item.with-items > .name	{
+			display: block;
+			grid-column-start: 1;
+			grid-column-end: 4;
+			grid-row-start: 1;
+			grid-row-end: 2;
+			text-align: center;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item.with-items > .name > a	{
+			position: relative;
+			top: -4px;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item.with-items > .items	{
+			display: block;
+			grid-column-start: 3;
+			grid-column-end: 4;
+			grid-row-start: 2;
+			grid-row-end: 4;
+			padding: 0 0 0 28px;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item.with-items:hover > .items	{
+			display: block;
+			left: 2px;
+			padding: 0 0 16px 26px;
+			position: absolute;
+			right: 1px;
+			top: 0px;
+			z-index: 1;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item.without-items > .name	{
+			align-items: center;
+			display: flex;
+			grid-column-start: 3;
+			grid-column-end: 4;
+			grid-row-start: 2;
+			grid-row-end: 3;
+			padding: 0 0 0 28px;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item.without-items > .items	{
+			display: none;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item:hover > .image::after	{
+			height: 114px;
+			width: 114px;
+		}
+		body > header > .catalogue > .items > .item > .content > .items > .item.more.with-items:not(:hover)::before 	{
+			font-size: 16px;
+			height: 34px;
+			left: 154px;
+		}
+	}
+/* body > header */
+
+
