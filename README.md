@@ -1,3 +1,3 @@
 # Webmaestro--frontend-developer
 
-<https://webmaestro.proridne.com/>
+https://github.com/zimorodokan-tests/Webmaestro--frontend-developer
